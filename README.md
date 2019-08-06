@@ -9,6 +9,7 @@ Simple Python flask app for Linux system temperature monitoring
 ```
 - install Python and Flask
 ```
+sudo apt-get install python3-venv
 python3 -m venv install venv
 . ./venv/bin/activate
 pip install flask

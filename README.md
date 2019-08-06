@@ -16,7 +16,7 @@ pip install flask
 ```
 - copy `systemp.service` file to `/etc/systemd/system/systemp.service`:
 ```
-   cp systemp.service /etc/systemd/system/systemp.service
+sudo cp systemp.service /etc/systemd/system/systemp.service
 ```
 - enable the service:
 ```

@@ -1,4 +1,5 @@
 . ./venv/bin/activate
-export FLASK_APP=systemp.py
+python3 systemp.py
+#export FLASK_APP=systemp.py
 # export FLASK_DEBUG=1
-flask run
+#flask run

@@ -14,5 +14,13 @@ def index():
 
 
 if __name__ == "__main__":
+    # Avoid logging accesses. The development Flask server is based on Werkzeug
+    # so need to set its logger.
+    import logging
+    log = logging.getLogger('werkzeug')
+    log.setLevel(logging.ERROR)
+
+    # Listen on all addresses in the system.
     app.run(host='0.0.0.0')
+
     print(index())

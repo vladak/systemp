@@ -37,3 +37,11 @@ sudo systemctl status systemp
 $ curl http://localhost:5000/
 {"cpu":57.452}
 ```
+
+### Telegraf
+
+To make the logs available in InfluxDB via Telegraf:
+```
+cp weather.conf /etc/telegraf/telegraf.d/systemp.conf
+sudo service telegraf restart
+```

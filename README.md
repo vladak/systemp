@@ -31,3 +31,9 @@ sudo systemctl daemon-reload
 sudo systemctl start systemp
 sudo systemctl status systemp
 ```
+
+## Use
+```
+$ curl http://localhost:5000/
+{"cpu":57.452}
+```

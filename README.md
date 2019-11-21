@@ -1,18 +1,17 @@
 # systemp
-Simple Python flask app for Linux system temperature monitoring
+
+Simple Python app for Linux system temperature monitoring to be consumed
+by Prometheus.
 
 ## Install
 
+- This needs Prometheus Python client API library:
+```
+sudo apt-get install python3-prometheus-client
+```
 - clone the repository to `/srv/`:
 ```
     git clone https://github.com/vladak/weather.git /srv/weather
-```
-- install Python and Flask
-```
-sudo apt-get -y install python3-venv
-python3 -m venv install venv
-. ./venv/bin/activate
-pip install flask
 ```
 - copy `systemp.service` file to `/etc/systemd/system/systemp.service`:
 ```
@@ -34,14 +33,9 @@ sudo systemctl status systemp
 
 ## Use
 ```
-$ curl http://localhost:5000/
-{"cpu":57.452}
-```
+$ curl http://localhost:8222/
 
-### Telegraf
+...
 
-To make the data available in InfluxDB via Telegraf:
-```
-cp weather.conf /etc/telegraf/telegraf.d/systemp.conf
-sudo service telegraf restart
+CPU_temp_teplota 58.913
 ```

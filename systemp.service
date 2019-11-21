@@ -6,7 +6,7 @@ User=pi
 Group=pi
 Type=simple
 WorkingDirectory=/srv/systemp
-ExecStart=bash /srv/systemp/run.sh
+ExecStart=python3 /srv/systemp/systemp.py
 ExecStop=/bin/kill -2 $MAINPID
 TimeoutStartSec=0
 

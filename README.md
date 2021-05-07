@@ -11,7 +11,9 @@ sudo apt-get install python3-prometheus-client
 ```
 - clone the repository to `/srv/`:
 ```
-    git clone https://github.com/vladak/weather.git /srv/weather
+sudo mkdir -p /srv/weather
+sudo chown $USER /srv/weather
+git clone https://github.com/vladak/weather.git /srv/weather
 ```
 - copy `systemp.service` file to `/etc/systemd/system/systemp.service`:
 ```

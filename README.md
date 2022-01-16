@@ -7,7 +7,7 @@ by Prometheus.
 
 - This needs Prometheus Python client API library:
 ```
-sudo apt-get install python3-prometheus-client
+sudo apt-get install -y python3-prometheus-client
 ```
 - clone the repository to `/srv/`:
 ```

@@ -11,6 +11,7 @@ sudo apt-get install -y python3-prometheus-client
 ```
 - clone the repository to `/srv/`:
 ```
+which git || sudo apt-get install -y git
 sudo mkdir -p /srv/systemp
 sudo chown $USER /srv/systemp
 git clone https://github.com/vladak/systemp.git /srv/systemp

@@ -40,5 +40,12 @@ $ curl http://localhost:8222/
 
 ...
 
-CPU_temp_teplota 58.913
+CPU_temp_pihole 58.913
+```
+
+This can be now added to `/etc/prometheus/prometheus.yml` like so:
+```yml
+  - job_name: CPU_pihole
+    static_configs:
+      - targets: ['pi:8222']
 ```

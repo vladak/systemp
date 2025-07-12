@@ -5,16 +5,18 @@ by Prometheus.
 
 ## Install
 
-- This needs Prometheus Python client API library:
-```
-sudo apt-get install -y python3-prometheus-client
-```
 - clone the repository to `/srv/`:
 ```
 which git || sudo apt-get install -y git
 sudo mkdir -p /srv/systemp
 sudo chown $USER /srv/systemp
 git clone https://github.com/vladak/systemp.git /srv/systemp
+```
+- install requirements:
+```
+python3 -m venv env
+. ./env/bin/activate
+python3 -m pip install -r requirements.txt
 ```
 - copy `systemp.service` file to `/etc/systemd/system/systemp.service`:
 ```

@@ -3,6 +3,8 @@
 Acquire CPU temperature and publish it to MQTT.
 """
 
+# pylint: disable=logging-fstring-interpolation
+
 import argparse
 import json
 import logging
@@ -74,7 +76,9 @@ def main():
         socket_pool=socket,
         ssl_context=ssl.create_default_context(),
     )
-    logger.info(f"Connecting to MQTT broker {args.mqtt_hostname} on port {args.mqtt_port}")
+    logger.info(
+        f"Connecting to MQTT broker {args.mqtt_hostname} on port {args.mqtt_port}"
+    )
     mqtt.connect()
 
     while True:

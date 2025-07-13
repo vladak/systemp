@@ -45,8 +45,7 @@ def parse_args():
         default=5,
     )
     parser.add_argument(
-        "-p",
-        "--port",
+        "--mqtt_port",
         help="MQTT broker port",
         default=1883,
     )

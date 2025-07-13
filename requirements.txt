@@ -1,1 +1,1 @@
-python3-prometheus-client
+adafruit-circuitpython-minimqtt

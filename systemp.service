@@ -6,7 +6,8 @@ User=pi
 Group=pi
 Type=simple
 WorkingDirectory=/srv/systemp
-ExecStart=/srv/systemp/env/bin/python3 /srv/systemp/systemp.py
+EnvironmentFile=/srv/systemp/environment
+ExecStart=/srv/systemp/env/bin/python3 /srv/systemp/systemp.py $ARGS
 ExecStop=/bin/kill -2 $MAINPID
 TimeoutStartSec=0
 
